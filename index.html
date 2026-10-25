@@ -1458,7 +1458,7 @@ body{background:var(--night);color:var(--paper);font-family:var(--body);overflow
       frag:()=> { const g = new THREE.TetrahedronGeometry(.035 + Math.random()*.04); g.scale(1, 2 + Math.random(), 1); return g; },
       nFrag:12, spark:0xf2fdff, nSpark:18, flash:0xbfefff, grav:9.8});
   }
-  const tileMat = new THREE.MeshStandardMaterial({color:0x4b5157, roughness:.75, side:THREE.DoubleSide});
+  const tileMat = new THREE.MeshStandardMaterial({color:0x17181a, roughness:.45, metalness:.15, side:THREE.DoubleSide});   // black fired-clay giwa with a soft glaze sheen
   function makeTiles(dir){
     const mat = tileMat.clone(), body = new THREE.Group(); mat.emissive = new THREE.Color(0xff3a20); mat.emissiveIntensity = 0;
     for(let i=0;i<3;i++){   // a stack of three giwa roof tiles
